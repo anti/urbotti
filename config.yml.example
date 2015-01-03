@@ -1,0 +1,8 @@
+server: "some.irc.server"
+port: 6667
+ping_interval: 60
+realname: "realname"
+user: "user name"
+nick: "bot nick"
+channels: ["#some_channel"]
+
