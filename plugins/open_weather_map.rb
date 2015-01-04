@@ -11,13 +11,8 @@ class OpenWeatherMap
     cities = cities.split(';')
     cities = ['helsinki', 'lappeenranta'] if cities.empty?
 
-    messages = []
-    cities.each do |city|
-      messages << query(city)
-    end
-    messages.each do |message|
-      m.reply message
-    end
+    messages = cities.map { |city| query(city) }
+    messages.each { |message| m.reply message }
   end
 
   private
